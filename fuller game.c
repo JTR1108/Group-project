@@ -256,9 +256,9 @@ void graveyardEncounter(Player *player) {
     };
     int choice;
 
-    printf("\nYou cross the old lady's bridge and arrive at the graveyard.\n");
-    printf("The air grows cold, and the ground is littered with crumbling tombstones.\n");
-    printf("A dark aura fills the area, and as you step further in, three skeleton warriors rise from the ground, their bones rattling ominously.\n");
+    printf("\nYou cross the old lady's bridge and arrive at the graveyard.\n\n");
+    printf("The air grows cold, and the ground is littered with crumbling tombstones.\n\n");
+    printf("A dark aura fills the area, and as you step further in, three skeleton warriors rise from the ground, their bones rattling ominously.\n\n");
     printf("They attack you as a group!\n\n");
 
     while ((skeletons[0].isAlive || skeletons[1].isAlive || skeletons[2].isAlive) && player->health > 0) {
@@ -395,7 +395,7 @@ void caveEncounter(Player *player) {
     Enemy goblin = {"Goblin", 30, 1};
     Room cave = {
         .name = "Ancient Cave",
-        .description = "a weathered stone door in the shape of a circle. Looks like it has'nt been open in ages",
+        .description = "a weathered stone door in the shape of a circle. Looks like it hasn't been open in ages",
         .item = "Ancient Amulet",
         .hasItem = 1,
         .locked = 1
@@ -456,7 +456,7 @@ void caveEncounter(Player *player) {
                 break;
 
             case 2:
-            printf("You walk over to the campfire, it seems like he does'nt notice you\n");
+            printf("You walk over to the campfire, it seems like he doesn't notice you\n");
                 interactWithNPC(player, &soldier);
                 printf("'Be warned, traveler. The Lich's power grows stronger with each soul he claims.'\n\n");
                 break;
@@ -532,11 +532,11 @@ void bridgeEncounter(Player *player) {
 
 TrollEncounter: // Label for the main troll encounter logic
     do {
-        printf("What would you like to do?\n");
+        printf("What would you like to do?\n\n");
         printf("1. Fight the Bridge Troll\n");
         printf("2. Attempt to negotiate\n");
-        printf("3. Try to flee\n");
-        printf("Your choice: ");
+        printf("3. Try to flee\n\n");
+        printf("Your choice: "\n);
         scanf("%d", &choice);
 
         switch (choice) {
@@ -729,7 +729,7 @@ void mountainsEncounter(Player *player) {
             switch (choice) {
                 case 1:
                     printf("\nYou fall to your knees and apologize profusely.\n");
-                    printf("The dragon stares at you for a moment before huffing, \"LEAVE, AND NEVER RETURN.\" You quickly retreat down the mountain.\n");
+                    printf("The dragon stares at you for a moment before huffing, \"LEAVE, AND NEVER RETURN.\"\n You quickly retreat down the mountain.\n");
                     return;
 
                 case 2:
